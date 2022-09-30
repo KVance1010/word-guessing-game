@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	border: 3px solid black;
+	width: 80%;
+	align-content: center;
+	display: block;
+	margin: 60px auto;
+	text-align: center;
+	font-size: 30px;
+	background-color: #f0ead6;
+	padding-top: 20px;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+main {
+	border-top: 3px solid black;
+	display: flex;
+	width: 100%;
+}
+
+.card {
+	justify-content: space-around;
+	border: 2px solid black;
+	margin: 2%;
+	padding: 20px;
+	width: 40%;
+}
+
+.timer {
+	padding-right: 50px;
+}

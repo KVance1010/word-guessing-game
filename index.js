@@ -37,28 +37,25 @@ function startTimer() {
 		wordElements = getRandomNumber();
 		chosenWord = gameWord[wordElements];
 	}
-	console.log(chosenWord);
 	
     var brokenWord = chosenWord.split('');
-    console.log(brokenWord);
 	var wordLength = brokenWord.length;
-    console.log(wordLength);
 	randomWord.textContent = '';
 	for (var i = 0; i < wordLength; i++) {
 		randomWord.textContent += '_ ';
 	}
 
-	// setInterval(function () {
-	// 	secondsLeft--;
-    //     console.log(secondsLeft);
-	// 	// userInput.addEventListener("keydown", function(event) {
-	// 	//     console.log("keydown", event);
-	// 	// }
-	// 	if (secondsLeft === 0) {
-	// 		clearInterval(timerInterval);
-	// 		// sendMessage();
-	// 	}
-	// }, 1000);
+var timerInterval = setInterval(function () {
+		secondsLeft--;
+        timer.textContent = secondsLeft;
+		// userInput.addEventListener("keydown", function(event) {
+		//     console.log("keydown", event);
+		// }
+		if (secondsLeft === 0) {
+			clearInterval(timerInterval);
+			// sendMessage();
+		}
+	}, 1000);
 }
 
 function getRandomNumber() {
